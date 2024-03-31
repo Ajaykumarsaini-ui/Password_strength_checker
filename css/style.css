@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    box-shadow: 2px 2px 12px royalblue;
+}
+input{
+    height: 34px;
+    font-size: 15px;
+    font-weight: 600 !important;
+    width: 300px !important;
+    background-color: antiquewhite !important;
+}
+
+form .field{
+    position: relative;
+}
+
+form .field .showBtn{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    display: none;
+    
+}
+
+form .indicator{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    margin: 20px auto;
+}
+
+form .indicator span{
+    width: 100%;
+    height:100%;
+    background-color: lightgrey;
+    border-radius: 5px;
+    position: relative;
+}
+
+form .indicator .medium{
+    margin: 0 6px !important;
+}
+
+form .indicator span.active:before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+
+}
+
+.indicator span.weak:before{
+    background-color: red;
+}
+.indicator span.medium:before{
+    background-color: orange;
+}
+.indicator span.strong:before{
+    background-color: green;
+}
+
+form .text{
+    display: none;
+}
+
+form .text .weaker{
+    color: red;
+}
+form .text .mediumer{
+    color: orange;
+}
+form .text .stronger{
+    color: green;
+}
